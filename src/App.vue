@@ -3,7 +3,7 @@
     <div class="blog">
       <blog-button @click="fetchPosts" class="download-btn">загрузить</blog-button>
       <blog-button @click="showModal">Создать пост</blog-button>
-      <blog-select v-model="selectedSort" :options="sortOptions"></blog-select>
+      <blog-select v-model:value="selectedSort" :options="sortOptions"></blog-select>
       <blog-input v-model:value="searchQuery" placeholder="Поиск"></blog-input>
       <blog-modal v-model:show="modalVisible">
         <blog-form :newPost="post" @create="createPost" @modify="modifyPost"></blog-form>
